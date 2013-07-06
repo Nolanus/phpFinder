@@ -1,7 +1,9 @@
 ![phpFinder Logo](/Logo.png)
 =============
 
-Ein Datei-Manager in php für die Datei-Verwaltung über den Browser
+Ein Datei-Manager in php für die Datei-Verwaltung über den Browser.
+
+**Web-File Manager heißt nun "phpFinder"!**
 
 ### Features
 
