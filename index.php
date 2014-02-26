@@ -3045,13 +3045,13 @@ if (!isset($timezone) || $timezone == "") {
 						fWrite($handler, '$picdistance = "' . (isset($_POST['savevisualsettings']) ? (isset($_POST['picdistance']) && intval($_POST['picdistance']) < 20 && intval($_POST['picdistance']) > 0 ? intval($_POST['picdistance']) : 5) : $picdistance ) . "\";\n");
 						fWrite($handler, '$timezone = "' . (isset($_POST['timezone']) ? str_replace("\"", "\\\"", $_POST['timezone']) : $timezone) . "\";\n");
 						fWrite($handler, '$MAX_UPLOAD = ' . (isset($_POST['maxuploads']) ? intval($_POST['maxuploads']) : $MAX_UPLOAD) . ";\n");
-						fWrite($handler, '$BLOCK_ADS = ' . (isset($_POST['savesettings']) && isset($_POST['bannerblock']) || !isset($_POST['savesettings']) && $BLOCK_ADS ? "true" : "false") . ";\n");
-						fWrite($handler, '$BLOCK_PIXLR = ' . (isset($_POST['savesettings']) && isset($_POST['pixlrblock']) || !isset($_POST['pixlrblock']) && $BLOCK_PIXLR ? "true" : "false"). ";\n");
-						fWrite($handler, '$AUTO_VERSION_CHECK = ' . (isset($_POST['savesettings']) && isset($_POST['autoversioncheck']) || !isset($_POST['autoversioncheck']) && $AUTO_VERSION_CHECK ? "true" : "false"). ";\n");
+						fWrite($handler, '$BLOCK_ADS = ' . status((isset($_POST['savesettings']) ? isset($_POST['bannerblock']) : $BLOCK_ADS), 2). ";\n");
+						fWrite($handler, '$BLOCK_PIXLR = ' . status((isset($_POST['savesettings']) ? isset($_POST['pixlrblock']) : $BLOCK_PIXLR), 2). ";\n");
+						fWrite($handler, '$AUTO_VERSION_CHECK = ' . status((isset($_POST['savesettings']) ? isset($_POST['autoversioncheck']) : $AUTO_VERSION_CHECK), 2). ";\n");
 						fWrite($handler, '$ffcount = "' . (isset($_POST['ffcount']) ? intval($_POST['ffcount']) : $ffcount) . "\";\n");
 						fWrite($handler, '$ffcountpos = "' . (isset($_POST['ffcountpos']) ? intval($_POST['ffcountpos']) : $ffcountpos) . "\";\n");
-						fWrite($handler, '$drawBorders = ' . ((isset($_POST['savevisualsettings']) && isset($_POST['drawBorders']) || !isset($_POST['savevisualsettings']) && $drawBorders) ? "true" : "false"). ";\n");
-						fWrite($handler, '$useColors = ' . ((isset($_POST['savevisualsettings']) && isset($_POST['useColors']) || !isset($_POST['savevisualsettings']) && $useColors) ? "true" : "false") . ";\n");
+						fWrite($handler, '$drawBorders = ' . (status((isset($_POST['savevisualsettings']) ? isset($_POST['drawBorders']) : $drawBorders), 2). ";\n"). ";\n");
+						fWrite($handler, '$useColors = ' . (status((isset($_POST['savevisualsettings']) ? isset($_POST['useColors']) : $useColors), 2). ";\n"). ";\n");
 						fWrite($handler, '$colors = array("' . (isset($_POST['lighter1']) ? $_POST['lighter1'] : $colors[0]) . '", "'
 						. (isset($_POST['lighter2']) ? $_POST['lighter2'] : $colors[1]) . '", "'
 						. (isset($_POST['basecolor']) ? $_POST['basecolor'] : $colors[2]) . '", "'
