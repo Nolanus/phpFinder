@@ -3,6 +3,8 @@
 
 Ein Datei-Manager in php für die Datei-Verwaltung über den Browser.
 
+Aktuelle Version: 0.905
+
 **Web-File Manager heißt nun "phpFinder"!**
 
 ### Features
