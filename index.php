@@ -3050,8 +3050,8 @@ if (!isset($timezone) || $timezone == "") {
 						fWrite($handler, '$AUTO_VERSION_CHECK = ' . status((isset($_POST['savesettings']) ? isset($_POST['autoversioncheck']) : $AUTO_VERSION_CHECK), 2). ";\n");
 						fWrite($handler, '$ffcount = "' . (isset($_POST['ffcount']) ? intval($_POST['ffcount']) : $ffcount) . "\";\n");
 						fWrite($handler, '$ffcountpos = "' . (isset($_POST['ffcountpos']) ? intval($_POST['ffcountpos']) : $ffcountpos) . "\";\n");
-						fWrite($handler, '$drawBorders = ' . (status((isset($_POST['savevisualsettings']) ? isset($_POST['drawBorders']) : $drawBorders), 2). ";\n"). ";\n");
-						fWrite($handler, '$useColors = ' . (status((isset($_POST['savevisualsettings']) ? isset($_POST['useColors']) : $useColors), 2). ";\n"). ";\n");
+						fWrite($handler, '$drawBorders = ' . (status((isset($_POST['savevisualsettings']) ? isset($_POST['drawBorders']) : $drawBorders), 2)). ";\n");
+						fWrite($handler, '$useColors = ' . (status((isset($_POST['savevisualsettings']) ? isset($_POST['useColors']) : $useColors), 2)). ";\n");
 						fWrite($handler, '$colors = array("' . (isset($_POST['lighter1']) ? $_POST['lighter1'] : $colors[0]) . '", "'
 						. (isset($_POST['lighter2']) ? $_POST['lighter2'] : $colors[1]) . '", "'
 						. (isset($_POST['basecolor']) ? $_POST['basecolor'] : $colors[2]) . '", "'
