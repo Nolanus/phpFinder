@@ -832,7 +832,7 @@ if (!isset($timezone) || $timezone == "") {
 			 * "Übersetzt" den Rückgabewert einer Funktion ins Deutsche
 			 * Modus raw = 0: "Ja" oder "Nein"
 			 * Modus raw = 1: "1" oder "0"
-			 * Modus raw = 2: "True" oder "False"
+			 * Modus raw = 2: "true" oder "false"
 			 */
 			function status($code, $raw = 0) {
 				switch ($raw) {
@@ -845,9 +845,9 @@ if (!isset($timezone) || $timezone == "") {
 						break;
 					case 2 :
 						if ($code) {
-							return "True";
+							return "true";
 						} else {
-							return "False";
+							return "false";
 						}
 						break;
 					default :
