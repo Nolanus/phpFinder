@@ -85,7 +85,7 @@ $GOOGLE_API = "";
  ====================================================
  */
 //Angabe der Version
-$VERSION = 0.9;
+$VERSION = 0.905;
 
 //Angabe der Standard Farben
 $defaultColors = array("#e3f1fe", "#3C86D1", "#aacfe4", "#0067CE", "#eeeeee");
